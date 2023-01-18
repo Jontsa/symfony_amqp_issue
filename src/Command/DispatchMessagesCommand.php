@@ -20,17 +20,17 @@ class DispatchMessagesCommand extends Command
 
     public function execute(InputInterface $input, OutputInterface $output) : int
     {
-        $this->bus->dispatch(new TestMessage('Message with delay of 2', 2, false));
-        $this->bus->dispatch(new TestMessage('Message with delay of 2', 2, false));
-        $this->bus->dispatch(new TestMessage('Message with delay of 2', 2, false));
-        $this->bus->dispatch(new TestMessage('Message with delay of 2', 2, false));
-        $this->bus->dispatch(new TestMessage('Message with delay of 2', 2, false));
-        $this->bus->dispatch(new TestMessage('Message with delay of 2', 2, false));
-        $this->bus->dispatch(new TestMessage('Message with delay of 2', 2, false));
-        $this->bus->dispatch(new TestMessage('Message with delay of 2', 2, false));
-        $this->bus->dispatch(new TestMessage('Message with delay of 2', 2, false));
+        $this->bus->dispatch(new TestMessage('Message with delay of 2 seconds', 2, false));
+        $this->bus->dispatch(new TestMessage('Message with delay of 2 seconds', 2, false));
+        $this->bus->dispatch(new TestMessage('Message with delay of 2 seconds', 2, false));
+        $this->bus->dispatch(new TestMessage('Message with delay of 2 seconds ', 2, false));
+        $this->bus->dispatch(new TestMessage('Message with delay of 2 seconds ', 2, false));
+        $this->bus->dispatch(new TestMessage('Message with delay of 2 seconds ', 2, false));
+        $this->bus->dispatch(new TestMessage('Message with delay of 2 seconds ', 2, false));
+        $this->bus->dispatch(new TestMessage('Message with delay of 2 seconds ', 2, false));
+        $this->bus->dispatch(new TestMessage('Message with delay of 2 seconds ', 2, false));
 
-        $this->bus->dispatch(new TestMessage('Message with delay of 5 that should throw an exception', 5, true));
+        $this->bus->dispatch(new TestMessage('Message with delay of 4 seconds and will throw exception', 4, true));
 
         return Command::SUCCESS;
 
