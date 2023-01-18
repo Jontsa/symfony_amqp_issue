@@ -7,7 +7,7 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "symfony/amqp-messenger": "6.2.*",
+        "symfony/amqp-messenger": "6.2.2",
         "symfony/console": "6.2.*",
         "symfony/dotenv": "6.2.*",
         "symfony/flex": "^2",
